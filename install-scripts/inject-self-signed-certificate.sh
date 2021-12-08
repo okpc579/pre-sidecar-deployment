@@ -12,18 +12,12 @@ source variables.yml
 # 사용 방법
 # 1. insecure-registry 설정을 진행한다. (CRI-O 기준 설정 가이드 : https://github.com/PaaS-TA/paas-ta-container-platform/blob/v1.1.0/install-guide/bosh/paas-ta-container-platform-bosh-deployment-spray-guide-v1.1.md#3.1)
 # 2. variables.yml 설정을 진행한다.
-# 2-6. is_self_signed_certificate=true
-# 2-7. app_registry_cert_path=support-files/private-repository.ca
+# 2-1. is_self_signed_certificate=true
+# 2-2. app_registry_cert_path=support-files/private-repository.ca
 # 3. app_registry_cert_path에 위치한 파일에 Private Repository에 사용된 인증서 CA를 넣는다.
 # 4. inject-self-signed-certificate.sh를 실행한다.
 # 5. Sidecar 설치 과정에 따라 2.generate-values.sh, 3.rendering-values.sh 스크립트를 실행한다.
-# 6. Deployment : cf-api-server, cf-api-worker, kpack-controller 를 찾고 다음과 같이 lable을 추가한다.
-# spec:
-#   template:
-#     metadata:
-#       labels:
-#         private-repo-cert-injection: enable
-# 7. 4.deploy-sidecar.sh 스크립트를 실행하여 Sidecar를 설치한다.
+# 6. 4.deploy-sidecar.sh 스크립트를 실행하여 Sidecar를 설치한다.
 ################################################################################################################
 
 
