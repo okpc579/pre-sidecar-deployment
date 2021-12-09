@@ -58,6 +58,21 @@ else
         return
 fi
 
+## App Private Registry Setting
+if [[ ${is_self_signed_certificate} = "true" ]]; then
+cat << EOF >> ./manifest/sidecar-values.yml
+is_self_signed_certificate: true
+EOF
+elif [[ ${is_self_signed_certificate} = "false" ]]; then
+cat << EOF >> ./manifest/sidecar-values.yml
+is_self_signed_certificate: false
+EOF
+else
+        echo "plz check variables.yml : is_self_signed_certificate"
+        return
+fi
+
+
 ## External Blobstore Setting
 if [[ ${use_external_blobstore} = "true" ]]; then
   cp support-files/external-blobstore-values.yml manifest/ -f

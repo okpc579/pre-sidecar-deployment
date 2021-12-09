@@ -97,3 +97,5 @@ system_registry:
   hostname: ""
   username: ""
   password: ""
+
+is_self_signed_certificate: true
