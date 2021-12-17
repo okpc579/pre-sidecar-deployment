@@ -40,7 +40,7 @@ directories:
   - path: .
     git:
       url: https://github.com/cloudfoundry/uaa-k8s-release
-      ref: 4810ecbe9911243d55a8a5dd74defa013bd8cad3
+      ref: 7ae47865dd68e9a8390f218f990ab1b3c3204a9d
     includePaths:
     - config/**/*
 - path: config/kpack/_ytt_lib/kpack
@@ -48,7 +48,7 @@ directories:
   - path: .
     githubRelease:
       slug: pivotal/kpack
-      tag: v0.4.1
+      tag: v0.5.0
       disableAutoChecksumValidation: true
     includePaths:
     - release-*.yaml

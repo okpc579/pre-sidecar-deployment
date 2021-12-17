@@ -29,12 +29,12 @@ directories:
 - contents:
   - git:
       commitTitle: images.yml updated by CI
-      sha: 4810ecbe9911243d55a8a5dd74defa013bd8cad3
+      sha: 7ae47865dd68e9a8390f218f990ab1b3c3204a9d
     path: .
   path: config/uaa/_ytt_lib/uaa-k8s-release
 - contents:
   - githubRelease:
-      url: https://api.github.com/repos/pivotal/kpack/releases/52008399
+      url: https://api.github.com/repos/pivotal/kpack/releases/55222486
     path: .
   path: config/kpack/_ytt_lib/kpack
 - contents:
